@@ -6,21 +6,14 @@ import { AuthModule } from './module/auth/auth.module';
 import { Auth } from './module/auth/entities/auth.entity';
 import { UsersModule } from './module/users/users.module';
 import { SharedModule } from './module/shared/shared.module';
+import config from './config';
 
 @Module({
-  imports: [TypeOrmModule.forRoot({
-    type:'postgres',
-    host:'localhost',
-    password:'12345678',
-    username:'postgres',
-    synchronize:true,
-    database:'tender',
-    entities: [Auth],
-    migrations: [],
-    port:5432
-
-  }), AuthModule, UsersModule, SharedModule],
+  imports: [TypeOrmModule.forRoot(config), AuthModule, UsersModule, SharedModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+
+  
+}
