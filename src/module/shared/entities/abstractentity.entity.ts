@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm';
 
-@Entity()
+@Entity('AbstarctEntity')
 export class AbstarctEntity {
     @PrimaryGeneratedColumn('uuid')
     id: string;
