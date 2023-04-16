@@ -2,9 +2,6 @@ import { AbstarctEntity } from "src/module/shared/entities/abstractentity.entity
 import { Column, Entity, PrimaryColumn } from "typeorm";
 
 @Entity()
-export class Auth extends AbstarctEntity {
+export class Auth {
    
-
-    @Column()
-    name:string
 }

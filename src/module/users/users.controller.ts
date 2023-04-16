@@ -18,8 +18,11 @@ export class UsersController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
+  async findOne(@Param('id') id: string) {
+    let res = await this.usersService.findOne({email:'chetan@gmail.com'})
+    console.log(res);
+    
+    return res
   }
 
   @Patch(':id')
